@@ -37,7 +37,12 @@
             transition: background-color 0.3s;
         }
 
-        .navbar a:hover {
+        /* Estilo del enlace activo */
+        .navbar a.active {
+            background-color: #007acc; /* Color de fondo para el enlace activo */
+        }
+
+        .navbar a:hover:not(.active) {
             background-color: #555555;
         }
 
@@ -75,9 +80,9 @@
 <body>
     <!-- Barra de navegación -->
     <div class="navbar">
-        <a href="https://davidballestertorres.com/makes">Proyectos</a>
-        <a href="https://davidballestertorres.com">Inicio</a>
-        <a href="https://davidballestertorres.com/social">Social</a>
+        <a href="https://davidballestertorres.com/makes" id="link-makes">Proyectos</a>
+        <a href="https://davidballestertorres.com" id="link-home">Inicio</a>
+        <a href="https://davidballestertorres.com/social" id="link-social">Social</a>
     </div>
 
     <!-- Contenido principal -->
@@ -93,6 +98,21 @@
             Bienvenido a mi página personal. Soy David Ballester Torres, un profesional apasionado por el desarrollo web y la tecnología. Aquí podrás conocer más sobre mis proyectos, intereses y enlaces sociales. ¡Gracias por visitar mi perfil!
         </p>
     </div>
+
+    <!-- Script para resaltar el enlace activo -->
+    <script>
+        // Detectar la URL actual y resaltar el enlace correspondiente
+        const currentURL = window.location.href;
+
+        if (currentURL.includes("/makes")) {
+            document.getElementById("link-makes").classList.add("active");
+        } else if (currentURL.includes("/social")) {
+            document.getElementById("link-social").classList.add("active");
+        } else {
+            document.getElementById("link-home").classList.add("active");
+        }
+    </script>
 </body>
 </html>
+
 
