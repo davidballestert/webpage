@@ -3,11 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing Web</title>
+    <title>David Ballester Torres - Currículum</title>
+    <style>
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            width: 100%;
+            background-color: #333333;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555555;
+        }
+
+        /* Contenido principal */
+        .content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        /* Imagen de perfil */
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #ffffff;
+        }
+
+        /* Encabezado */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+        }
+
+        /* Texto de introducción */
+        p.introduction {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; font-family: Arial, sans-serif; color: #333;">
-        TESTING WEB
-    </h1>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="https://davidballestertorres.com/makes">Proyectos</a>
+        <a href="https://davidballestertorres.com">Inicio</a>
+        <a href="https://davidballestertorres.com/social">Social</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <!-- Imagen de perfil -->
+        <img src="ruta_de_tu_foto.jpg" alt="David Ballester Torres" class="profile-img">
+
+        <!-- Encabezado -->
+        <h1>David Ballester Torres</h1>
+
+        <!-- Introducción -->
+        <p class="introduction">
+            Bienvenido a mi página personal. Soy David Ballester Torres, un profesional apasionado por el desarrollo web y la tecnología. Aquí podrás conocer más sobre mis proyectos, intereses y enlaces sociales. ¡Gracias por visitar mi perfil!
+        </p>
+    </div>
 </body>
 </html>
+
