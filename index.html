@@ -1,104 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Ballester</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            background-color: #1a1a1a;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .navbar {
-            width: 100%;
-            background-color: #333333;
-            padding: 14px 0;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            box-sizing: border-box;
-        }
-
-        .navbar a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .navbar a.active {
-            background-color: #28ad4e;
-        }
-
-        .navbar a:hover:not(.active) {
-            background-color: #555555;
-        }
-
-        .content {
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        .profile-img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #ffffff;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #f0f0f0;
-        }
-
-        p.introduction {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #cccccc;
-        }
-    </style>
+    <title>David Ballester Torres</title>
+    <link rel="icon" href="web_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="https://davidballestertorres.com/makes" id="link-makes">Proyectos</a>
-        <a href="https://davidballestertorres.com" id="link-home">Inicio</a>
-        <a href="https://davidballestertorres.com/social" id="link-social">Social</a>
-    </div>
+    <header class="hero">
+        <div class="container">
+            <h1 id="title"></h1>
+            <p id="subtitle"></p>
+            <button id="lang-btn" class="cta-button">Español</button>
+        </div>
+    </header>
 
-    <div class="content">
-        <img src="face.png" alt="David Ballester Torres" class="profile-img">
-        <h1>David Ballester Torres</h1>
-        <p class="introduction">
-            Bienvenido a mi página personal. Soy David Ballester Torres, un profesional apasionado por el desarrollo web y la tecnología. Aquí podrás conocer más sobre mis proyectos, intereses y enlaces sociales. ¡Gracias por visitar mi perfil!
-        </p>
-    </div>
+    <main>
+        <section id="know-me" class="section">
+            <div class="container">
+                <h2 id="know-me-title"></h2>
+                <p id="know-me-desc"></p>
+            </div>
+        </section>
 
-    <script>
-        const currentURL = window.location.href;
+        <section id="projects" class="section dark">
+            <div class="container">
+                <h2 id="projects-title"></h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 id="project1-title"></h3>
+                        <p id="project1-desc"></p>
+                    </div>
+                    <div class="project-card">
+                        <h3 id="project2-title"></h3>
+                        <p id="project2-desc"></p>
+                    </div>
+                    <div class="project-card">
+                        <h3 id="project3-title"></h3>
+                        <p id="project3-desc"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        if (currentURL.includes("/makes")) {
-            document.getElementById("link-makes").classList.add("active");
-        } else if (currentURL.includes("/social")) {
-            document.getElementById("link-social").classList.add("active");
-        } else {
-            document.getElementById("link-home").classList.add("active");
-        }
-    </script>
+    <footer>
+        <div class="container">
+            <p>© 2024 David Ballester Torres</p>
+            <a href="https://www.linkedin.com/in/davidballestertorres/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/davidbtr" target="_blank" class="social-link">
+            <i class="fab fa-github"></i> GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
